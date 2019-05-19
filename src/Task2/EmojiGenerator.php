@@ -6,8 +6,15 @@ namespace App\Task2;
 
 class EmojiGenerator
 {
+    private $emoji = ['🚀', '🚃', '🚄', '🚅', '🚇'];
+
     public function generate(): \Generator
     {
-        // @todo
+        $countEmoji = count($this->emoji);
+
+        for ($i = 0; $i < $countEmoji; $i++) {
+
+            yield $this->emoji[$i];
+        }
     }
 }
