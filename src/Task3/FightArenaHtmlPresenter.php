@@ -10,6 +10,13 @@ class FightArenaHtmlPresenter
 {
     public function present(FightArena $arena): string
     {
-        // @todo
+        $allFights = $arena->all();
+        $stdOut = '';
+        foreach ($allFights as $fight) {
+            $stdOut.= "<p>". $fight->getName() . ': ' . $fight->getHealth() . ", ". $fight->getAttack() . "</p><br>";
+            $stdOut.= "<img src=\"".$fight->getImage()."\">";
+
+        }
+        return $stdOut;
     }
 }

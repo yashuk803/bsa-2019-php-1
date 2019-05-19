@@ -7,6 +7,27 @@ use App\Task3\FightArenaHtmlPresenter;
 use App\Task1\Fighter;
 
 $arena = new FightArena();
+$arena->add(new Fighter(
+    1,
+    'Ryu',
+    100,
+    10,
+    'https://bit.ly/2E5Pouh'
+));
+$arena->add(new Fighter(
+    2,
+    'Chun-Li',
+    70,
+    30,
+    'https://bit.ly/2Vie3lf'
+));
+$arena->add(new Fighter(
+    3,
+    'Ken Masters',
+    80,
+    20,
+    'https://bit.ly/2VZ2tQd'
+));
 $presenter = new FightArenaHtmlPresenter();
 $presentation = $presenter->present($arena);
 
